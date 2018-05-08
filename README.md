@@ -1,0 +1,3 @@
+# Provision and Deprovision Kafka Topics from the Service Catalog
+
+An APB to create (and delete) Kafka topics, using the Strimzi Topic controller...
