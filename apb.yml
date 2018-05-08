@@ -1,0 +1,30 @@
+version: 1.0
+name: strimzi-topic-apb
+description: Strimzi topic management
+bindable: False
+async: optional
+metadata:
+  displayName: Strimzi Topic
+  imageUrl: "https://avatars2.githubusercontent.com/u/34767428?s=200&v=4"
+  documentationUrl: "http://strimzi.io/docs/master"
+  providerDisplayName: "Red Hat, Inc."
+plans:
+  - name: default
+    description: This default plan deploys strimzi-topic-apb
+    free: True
+    metadata: {}
+    parameters: 
+    - name: topic_name
+      title: Name of the Topic for Strimzi
+      type: string
+      required: true
+    - name: partition_count
+      title: Number of partitions for the topic      
+      required: true
+      default: 1
+      type: string
+    - name: int
+      title: Number of replicas for the topic      
+      required: true
+      default: 1
+      type: int

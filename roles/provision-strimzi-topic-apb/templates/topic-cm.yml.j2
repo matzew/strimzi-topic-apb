@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ topic_name }}
+  labels:
+    strimzi.io/kind: topic
+    strimzi.io/cluster: my-cluster
+data:
+  name: {{ topic_name }}
+  partitions: "{{ partition_count }}"
+  replicas: "{{ replica_count }}"
