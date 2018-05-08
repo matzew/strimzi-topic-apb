@@ -1,0 +1,7 @@
+- name: Delete configmaps
+  k8s_v1_config_map:
+    name: '{{ item }}'
+    namespace: '{{ namespace }}'
+    state: absent
+  with_items:
+  - '{{ topic_name }}'

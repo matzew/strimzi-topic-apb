@@ -1,0 +1,10 @@
+- name: Create Topic configmap template
+  template:
+    src: topic-cm.yml.j2
+    dest: /tmp/topic-cm.yaml
+
+- name: Create ConfigMap for {{ topic_name }}
+  shell: oc create -f /tmp/topic-cm.yaml -n {{ namespace }}
+
+- name: delete configmap template file
+  file: path=/tmp/topic-cm.yaml state=absent
