@@ -22,8 +22,8 @@ plans:
       title: Number of partitions for the topic      
       required: true
       default: 1
-      type: string
-    - name: int
+      type: int
+    - name: replica_count
       title: Number of replicas for the topic      
       required: true
       default: 1
